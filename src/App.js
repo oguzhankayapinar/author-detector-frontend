@@ -1,24 +1,18 @@
-import logo from './logo.svg';
 import './App.css';
+import AuthorAdd from './AuthorAdd';
+import AuthorDetector from './AuthorDetector';
+import AuthorList from './AuthorList';
+import { AuthorProvider } from './contexts/authorContext';
 
 function App() {
   return (
+    <AuthorProvider>
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <AuthorAdd />
+      <AuthorDetector />
+      <AuthorList />
     </div>
+    </AuthorProvider>
   );
 }
 
